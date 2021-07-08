@@ -1,1 +1,17 @@
 Test 2
+@RestController
+public class HomeController {
+ 
+	@Autowired
+	private IPerson service;
+	
+	@GetMapping(path = "/new/save")
+	public String save( ) {
+		Person p = new Person();
+		p.setName("newSave1");
+		Long id1 = service.save(p);
+		p.setName("newSave2");
+		Long id2 = service.save(p); // OK 
+		return "save =" + id1 + id2;
+	}
+}

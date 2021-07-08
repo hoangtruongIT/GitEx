@@ -1,0 +1,6 @@
+int a = 123;
+if(a > 100) {
+  sys("a lon hon 100)
+} else {
+  sys("a be hon 100)
+}
